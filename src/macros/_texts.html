@@ -1,0 +1,10 @@
+{% macro paragraph(text) %}
+  <mj-section {{bp_section|safe}}>
+    <mj-column {{bp_column|safe}}>
+      <mj-text {{bp_text|safe}}>
+        {{text}}
+      </mj-text>
+    </mj-column>
+  </mj-section>
+{% endmacro %}
+

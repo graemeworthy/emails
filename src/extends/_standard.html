@@ -1,0 +1,15 @@
+{% extends './_master.html' %}
+
+{% block master %}
+  {% block standard %}{% endblock %}
+  <mj-section background-color="#fafafa" {{bp_section|safe}}>
+    <mj-column {{bp_column|safe}}>
+    <mj-text align="center" color="#656565" font-size="15px" {{bp_text|safe}}>
+        <strong>Brug for hjælp?</strong> Kontakt os på tlf. <a href="tel:70208082" style="color: #333333" >70 20 80 82</a> eller <a href="mailto:info@boligportal.dk" style="color: #333333">info@boligportal.dk</a>
+        <br>
+        <br>
+        <a href="https://www.facebook.com/boligportal" target="_blank"><img align="none" alt="Facebook" height="32" src="http://www.boligportal.dk/info/app/uploads/bp-facebook-icon.png" style="width: 33px; height: 32px; margin: 0px 6px 0px 0px;" width="33"></a><a href="https://twitter.com/boligportal" target="_blank"><img align="none" height="32" src="http://www.boligportal.dk/info/app/uploads/bp-twitter-icon.png" style="width: 32px; height: 32px; margin: 0px;" width="32"></a>
+      </mj-text>
+    </mj-column>
+  </mj-section>
+{% endblock %}

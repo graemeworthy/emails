@@ -1,0 +1,9 @@
+{% macro primary(text, url) %}
+  <mj-section {{bp_section|safe}}>
+    <mj-column>
+      <mj-button href="{{ url }}" {{bp_button|safe}}>
+        {{ text }}
+      </mj-button>
+    </mj-column>
+  </mj-section>
+{% endmacro %}
