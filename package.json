@@ -11,6 +11,7 @@
     "gulp-rename": "^1.2.2",
     "gulp-replace": "^0.5.4",
     "gulp-shell": "^0.5.2",
-    "gulp-swig": "^0.8.0"
+    "gulp-swig": "^0.8.0",
+    "gulp-util": "^3.0.7"
   }
 }

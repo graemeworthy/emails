@@ -1,8 +1,9 @@
 var gulp = require('gulp');
-var swig = require('gulp-swig');
 var rename = require('gulp-rename');
-var shell = require('gulp-shell');
 var replace = require('gulp-replace');
+var shell = require('gulp-shell');
+var swig = require('gulp-swig');
+var gutil = require('gulp-util');
 
 gulp.task('default', function() {
   gulp.src('./src/*.html')
@@ -18,6 +19,6 @@ gulp.task('default', function() {
     .pipe(gulp.dest('./mjml/'))
     // Run mjml compiler from bash, sinces gulp mjml compiler not fully functional working :(
     .pipe(shell([
-      "export filename=<%= file.path %>; name=$(basename $filename .mjml); mjml -r $filename -o ./dist/$name.html"
+      "export filename=<%= file.path %>; name=$(basename $filename .mjml); mjml -r $filename -o ./dist/$name.html;"
     ]))
 });
