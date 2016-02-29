@@ -1,0 +1,14 @@
+{# Desc:     Notification send when a user receive an message. #}
+{# Mandrill: https://mandrillapp.com/templates/code?id=newmessage-dk #}
+
+{% extends './extends/_standard.html' %}
+{% import './macros/_buttons.html' as button %}
+{% import './macros/_texts.html' as text %}
+
+{% block standard %}
+
+  {{ text.paragraph('Du har modtaget en eller flere henvendelser vedrørende boligen på <strong>[[propertyStreetName]] [[propertyAddressNumber]], [[propertyAddressZipCode]] [[propertyAddressCity]]</strong>') }}
+  {{ button.primary('Se beskeder', '[[linkToThread]]') }}
+
+{% endblock %}
+
