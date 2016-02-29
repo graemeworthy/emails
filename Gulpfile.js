@@ -19,6 +19,6 @@ gulp.task('default', function() {
     .pipe(gulp.dest('./mjml/'))
     // Run mjml compiler from bash, sinces gulp mjml compiler not fully functional working :(
     .pipe(shell([
-      "export filename=<%= file.path %>; name=$(basename $filename .mjml); mjml -r $filename -o ./dist/$name.html;"
+      "export filename=<%= file.path %>; name=$(basename $filename .mjml); mjml -r $filename -o ./dist/$name.html; sed -i '1i<!-- Dont change this template. Make changes here https://github.com/Boligportal/emails -->' ./dist/$name.html"
     ]))
 });
