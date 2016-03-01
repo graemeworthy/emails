@@ -1,0 +1,7 @@
+{% macro basic(url, alt, width) %}
+  <mj-section {{bp_section|safe}}>
+    <mj-column>
+      <mj-image src="{{url}}" alt="{{alt}}" padding="0" ></mj-image>
+    </mj-column>
+  </mj-section>
+{% endmacro %}
