@@ -1,0 +1,24 @@
+{# Desc: #}
+
+{% extends './extends/_standard.html' %}
+{% import './macros/_texts.html' as text %}
+
+{% block standard %}
+  {{ text.headerminimal_paragraph('Hej {navn}', 'Tak for din annoncen. Vi bekræfter, at du har oprettet en annonce vedrørende lejemålet beliggende på {adresse}. Vi vil gerne gøre dig opmærksom på, at annoncen først er online på BoligPortal, når den er godkendt og aktiveret af BoligPortal.') }}
+  {{ text.paragraph('Dit login er: <strong>{login}</strong>', bp_color_dust_green, 'white') }}
+  {{ text.paragraph('<strong>Vi bekræfter, at du har valgt følgende annonce</strong>') }}
+  <mj-section background-color="#efefef" {{bp_section|safe}}>
+    <mj-column width="33%">
+      <mj-text {{bp_text|safe}}><strong>Produkt</strong><br/>{opNavn}</mj-text>
+    </mj-column>
+    <mj-column width="33%">
+      <mj-text {{bp_text|safe}}><strong>Pris</strong><br/>DDK {opPris}</mj-text>
+    </mj-column>
+    <mj-column width="33%">
+      <mj-text {{bp_text|safe}}><strong>Total</strong><br/>DDK {opPrisTotal}</mj-text>
+    </mj-column>
+  </mj-section>
+  
+  {{ text.paragraph('God fornøjelse med udlejningen af lejemålet.') }}
+
+{% endblock %}
