@@ -1,10 +1,54 @@
-{% macro paragraph(text) %}
+{% macro paragraph(text, backgroundcolor, color) %}
+  <mj-section background-color="{{backgroundcolor|default('white')}}" {{bp_section|safe}}>
+    <mj-column {{bp_column|safe}}>
+      <mj-text color="{{color|default('#34495e')}}" {{bp_text|safe}}>
+        {{text}}
+      </mj-text>
+    </mj-column>
+  </mj-section>
+{% endmacro %}
+
+{% macro h2(text) %}
   <mj-section {{bp_section|safe}}>
     <mj-column {{bp_column|safe}}>
+      <mj-text {{bp_text_h2|safe}}>
+        {{text}}
+      </mj-text>
+    </mj-column>
+  </mj-section>
+{% endmacro %}
+
+{% macro h4(text) %}
+  <mj-section {{bp_section|safe}}>
+    <mj-column {{bp_column|safe}}>
+      <mj-text {{bp_text_h4|safe}}>
+        {{text}}
+      </mj-text>
+    </mj-column>
+  </mj-section>
+{% endmacro %}
+
+{% macro header_paragraph(header, text) %}
+  <mj-section {{bp_section|safe}}>
+    <mj-column {{bp_column|safe}}>
+      <mj-text {{bp_text_h2|safe}}>
+        {{header}}
+      </mj-text>
       <mj-text {{bp_text|safe}}>
         {{text}}
       </mj-text>
     </mj-column>
   </mj-section>
 {% endmacro %}
+
+{% macro headerminimal_paragraph(headerminimal, text) %}
+  <mj-section {{bp_section|safe}}>
+    <mj-column {{bp_column|safe}}>
+      <mj-text {{bp_text|safe}}>
+        <strong>{{headerminimal}}</strong><br/>{{text}}
+      </mj-text>
+    </mj-column>
+  </mj-section>
+{% endmacro %}
+
 
