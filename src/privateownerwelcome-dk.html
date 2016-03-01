@@ -1,0 +1,31 @@
+{# Desc: Unknown #}
+
+{% extends './extends/_standard.html' %}
+{% import './macros/_texts.html' as text %}
+{% import './macros/_images.html' as image %}
+
+{% block standard %}
+  {{ image.basic('http://www.boligportal.dk/blog/wp-content/uploads/2016/02/Mand-ved-computer.jpgtest-.jpg', 'Tak for din udlejerannonce (billede).')}}
+  {{ text.headerminimal_paragraph('Hej [[firstName]]', 'Tak for din udlejerannonce for lejemålet {adresse}.<br/>Vi er glade for, at du har valgt BoligPortal, og vi vil gerne hjælpe dig med at finde den rette lejer.') }}
+  {{ text.paragraph('Dit login er: <strong>{login}</strong><br/>Dit sagsnummer er: <strong>{annonceceld}</strong>', bp_color_dust_green, 'white') }}
+  {{ text.paragraph('Vidste du godt, at BoligPortal validerer alle annoncer inden de aktiveres? Så hvis du undrer dig over, hvorfor du ikke kan se din annonce med det samme, skyldes det at din annonce venter på at blive gennemlæst. For at undgå falske annoncer bliver alle annoncer gennemlæst inden de aktiveres. Når din annonce er godkendt bliver den online for alle brugere på BoligPortal.') }}
+
+  <mj-section {{bp_section|safe}}>
+    <mj-column>
+      <mj-text {{bp_list_header|safe}}>3 gode huskeråd</mj-text>
+      <mj-list {{bp_list|safe}}>
+        <li>Med din udlejeannonce kan du få overblik over alle boligsøgende, der søger bolig som din ved at gå ind under ”Find Lejer til valgte bolig” på din menu.</li> 
+        <br/>
+        <li>Husk at markere lejemålet reserveret eller udlejet, når du har fundet en lejer.
+        </li>
+        <br/>
+        <li>Du har hele tiden mulighed for at ændre og redigere i din annoncetekst og indsætte billeder.
+        </li>
+      </mj-list>
+    </mj-column>
+  </mj-section>
+
+  {{ text.paragraph('Vi ønsker dig god fornøjelse med udlejning af boligen.') }}
+
+
+{% endblock %}    
