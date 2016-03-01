@@ -1,5 +1,4 @@
-{# Desc:     Notification send instantly when a place match a users save search #}
-{# Mandrill: https://mandrillapp.com/templates/code?id=newmessage-dk #}
+{# Desc: Notification send instantly when a place match a users save search #}
 
 {% extends './extends/_standard.html' %}
 {% import './macros/_buttons.html' as button %}
@@ -7,7 +6,7 @@
 
 {% block standard %}
 
-  {{ text.paragraph('<strong>Hej [[firstName]]</strong><br>Vi har fundet en bolig til dig, som matcher din gemte søgning: [[savedSearchName]].') }}
+  {{ text.headerminimal_paragraph('Hej [[firstName]]', 'Vi har fundet en bolig til dig, som matcher din gemte søgning: [[savedSearchName]].') }}
   
   {% include "./includes/_hr.html" %}
 
@@ -18,7 +17,7 @@
     <mj-column width="70%">
       <mj-text {{bp_text|safe}}>
         <strong><a href="[[adUrl]]" {{bp_link|safe}}>[[title]]</a></strong><br/>
-        [[cityName]] ([[zipCode]])<br/>Størrelse [[livingArea]]m²<br/>Husleje [[rent]]kr. om mdr.
+        [[cityName]] ([[zipCode]])<br/>Størrelse [[livingArea]] m²<br/>Husleje [[rent]] kr.
       </mj-text>
       <mj-button href="[[adUrl]]" align="left" {{bp_button|safe}}>
         Se bolig

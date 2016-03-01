@@ -6,7 +6,7 @@
 
 {% block standard %}
 
-  {{ text.paragraph('<strong>Hej [[firstName]] [[lastName]]</strong>. Velkommen til BoligPortal.<br><br>Din bruger er nu oprettet, og du har nu mulighed for at kontakte udlejere på annoncer, der er ældre end 21 dage. Herudover har du mulighed for at kontakte alle sælgere af andels- og ejerboliger samt lejeboligsøgende. Ønsker du at kontakte udlejere bag de nyeste annoncer, skal du oprette en <strong>findBoligPakke</strong>.') }}
+  {{ text.headerminimal_paragraph('Hej [[firstName]] [[lastName]].', 'Din bruger er nu oprettet, og du har nu mulighed for at kontakte udlejere på annoncer, der er ældre end 21 dage. Herudover har du mulighed for at kontakte alle sælgere af andels- og ejerboliger samt lejeboligsøgende. Ønsker du at kontakte udlejere bag de nyeste annoncer, skal du oprette en <strong>findBoligPakke</strong>.') }}
   {{ button.primary('Opret findBoligPakke', 'http://www.boligportal.dk/find-bolig-pakke') }}
 
 {% endblock %}
