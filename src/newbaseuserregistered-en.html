@@ -1,0 +1,13 @@
+{% extends './extends/_standard.html' %}
+
+{% import './macros/_buttons.html' as button %}
+{% import './macros/_texts.html' as text %}
+
+
+{% block standard %}
+
+  {{ text.headerminimal_paragraph('Hello [[firstName]] [[lastName]].', 'Your user is now created and you now have the opportunity to contact landlords on ads older than 21 days. Further you have the opportunity to contact all sellers of cooperative dwellings, owner-occupied dwellings and rented accommodation seekers. If you want to contact landlords behind the latest ads you must create a <strong>findBoligPakke</strong>.') }}
+  {{ button.primary('Create findBoligPakke', 'http://www.boligportal.dk/find-bolig-pakke') }}
+  {{ text.paragraph('If you have any questions you can find answers to almost everything on our <a href="https://boligportal.zendesk.com">support pages</a>. You can also see the office hours, chat with customer service or send us an email.') }}
+
+{% endblock %}

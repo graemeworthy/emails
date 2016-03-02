@@ -1,0 +1,35 @@
+{% extends './extends/_standard.html' %}
+
+{% import './macros/_buttons.html' as button %}
+{% import './macros/_texts.html' as text %}
+
+
+{% block standard %}
+
+  {{ text.headerminimal_paragraph('Hej [[contactName]].', 'Boligportal.dk ønsker at sikre, at den kontaktinformation vi har på vores tilknyttede StorUdlejere er opdateret. Således kan vi give dig den bedste service. Du bedes derfor enten bekræfte eller redigere nedenstående oplysninger:') }}
+
+
+  <mj-section {{bp_section|safe}}>
+    <mj-column width="90%" background-color="#efefef">
+      <mj-text {{bp_text|safe}}>
+        Udlejer: [[name]]<br/>Kontaktperson: [[contactName]]<br/>Adresse: [[address]]<br/>By og Postnr: [[city]] og [[zipcode]]<br/>Email: [[email]]<br/>Telefonnr.: [[firstPhone]] [[secondPhone]]
+      </mj-text>  
+    </mj-column>
+  </mj-section>
+
+  <mj-section {{bp_section|safe}}>
+    <mj-column width="50%">
+      <mj-button href="[[confirmLink]]" {{bp_button|safe}}>
+        Bekræft kontaktoplysninger
+      </mj-button>
+    </mj-column>
+    <mj-column width="50%">
+      <mj-button href="[[editLink]]" background-color="{{bp_color_primary}}" {{bp_button|safe}}>
+        Rediger kontaktoplysninger
+      </mj-button>
+    </mj-column>
+  </mj-section>
+
+  {{ text.paragraph('Boligportal.dk forbeholder sig ret til at kontakte brugere af portalen, såfremt kontaktoplysningerne ikke bekræftes eller korrigeres via et af de to link ovenfor.<br/><br/>Hvis du har spørgsmål eller kommentarer i øvrigt, er du velkommen til at kontakte os på tlf. 70 20 80 82.') }}
+
+{% endblock %}
