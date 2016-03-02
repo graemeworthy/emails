@@ -1,0 +1,55 @@
+{# Desc: Unknown #}
+
+{% extends './extends/_standard.html' %}
+{% import './macros/_texts.html' as text %}
+{% import './macros/_images.html' as image %}
+
+{% block standard %}
+  {{ image.basic('http://www.boligportal.dk/blog/wp-content/uploads/2015/10/MetroX1.jpg', 'Velkommen til (billede).')}}
+  {{ text.headerminimal_paragraph('Hej [[firstName]]', 'Velkommen som boligsøgende på BoligPortal. Du er nu godt på vej til at finde dit nye hjem. Vi er glade for at du har valgt BoligPortal, og vi vil meget gerne hjælpe dig med at finde drømmeboligen.') }}
+  
+  {{ text.headerminimal_paragraph('Din profil er vejen til drømmeboligen', 'Vi vil gerne gøre dig opmærksom på de muligheder du får med din personlige profil på BoligPortal. På BoligPortal kan du finde dit nye hjem på to måder:') }}
+
+  <mj-section {{bp_section|safe}}>
+    <mj-column>
+      <mj-text {{bp_text|safe}}>
+        <strong>1. Udlejere kontakter dig</strong><br/>
+        Du kan også blive kontaktet direkte af udlejer på baggrund af din søgeprofil og modtage boligtilbud direkte i din indbakke, som ikke er annonceret på siden. Mange udlejere kontakter nemlig boligsøgende på baggrund af deres profil. En god profiltekst er derfor med til at øge din chance for at finde drømmeboligen hurtigt.
+      </mj-text>
+    </mj-column>
+    <mj-column>
+      <mj-text {{bp_text|safe}}>
+        <strong>2. Kontakt udlejere</strong><br/>
+        Med din profil kan du nu kontakte udlejere på de boligannoncer du finder interessante og komme i betragtning til de boliger du søger.
+      </mj-text>
+    </mj-column>
+  </mj-section>
+
+  <mj-section {{bp_section|safe}}>
+    <mj-column>
+      <mj-text {{bp_text|safe}}>
+        Du kan læse mere om, hvordan du laver en god præsentation af dig selv både i din profil, og når du skriver til udlejer. <a href="https://boligportal.zendesk.com/entries/22912688-God-præsentation" {{bp_link|safe}}>Se her hvordan</a>. Vi ønsker dig god fornøjelse med boligjagten &#128522;
+      </mj-text>
+    </mj-column>
+  </mj-section>
+
+      
+
+
+
+
+{% endblock %}    
+
+
+
+
+
+<p><b>Din profil er vejen til drømmeboligen</b><br>Vi vil gerne gøre dig opmærksom på de muligheder du får med din personlige profil på BoligPortal. På BoligPortal kan du finde dit nye hjem på to måder:</p>
+
+<ul>
+  <li> Med din profil kan du nu kontakte udlejere på de boligannoncer du finder interessante og komme i betragtning til de boliger du søger.</li>
+  <li> Du kan også blive kontaktet direkte af udlejer på baggrund af din søgeprofil og modtage boligtilbud direkte i din indbakke, som ikke er annonceret på siden. Mange udlejere kontakter nemlig boligsøgende på baggrund af deres profil. En god profiltekst er derfor med til at øge din chance for at finde drømmeboligen hurtigt.</li>
+</ul>
+
+
+<p>Vi ønsker dig god fornøjelse med boligjagten &#128522;</p>

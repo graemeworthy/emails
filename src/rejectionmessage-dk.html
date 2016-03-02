@@ -1,0 +1,13 @@
+{# Desc: Notification send to tenant when a landlort set place as rented out. #}
+
+{% extends './extends/_standard.html' %}
+{% import './macros/_buttons.html' as button %}
+{% import './macros/_texts.html' as text %}
+
+{% block standard %}
+
+  {{ text.headerminimal_paragraph('Hej [[recipientName]]', 'Du har tidligere kontaktet udlejeren af [[housingAddress]]. Boligen er netop blevet markeret som udlejet.') }}
+  {{ button.default('Se besked fra udlejer', '[[linkToThread]]') }}
+
+{% endblock %}
+

@@ -1,0 +1,26 @@
+{# Desc: #}
+
+{% extends './extends/_standard.html' %}
+{% import './macros/_buttons.html' as button %}
+{% import './macros/_texts.html' as text %}
+
+{% block standard %}
+
+  {{ text.headerminimal_paragraph('Hej [[firstName]]', 'Har du svært ved at danne dig overblik over, hvordan du skal gribe din boligsøgning an? Så kan du tage det helt roligt, vi skal nok guide dig.') }}
+
+  {{ text.headerminimal_paragraph('Hvor skal jeg starte?', 'På BoligPortal ved vi godt, at tag over hovedet er noget af det vigtigste for, at du kan få din hverdag til at fungere. De fleste oplever, at det kan være tidskrævende, og det kræver en god portion tålmodighed. Spark din boligsøgning i gang med vores 10 gode råd.') }}
+
+  {{ button.primary('Få BoligPortals 10 gode råd', 'http://www.boligportal.dk/blog/?s=10+råd') }}
+
+  {{ text.headerminimal_paragraph('Tag boligsøgningen med i baglommen', 'Brug BoligPortals app og få besked med det samme, når der er nye boliger, som matcher dine ønsker.') }}
+
+  {% include "./includes/_promoteapp-dk.html" %}
+  {{ text.paragraph('Vi ønsker dig god fornøjelse med boligjagten &#128522;') }}
+
+{% endblock %}
+
+
+
+
+
+
