@@ -1,0 +1,10 @@
+{# Desc: Notification send when a user receive an message. #}
+
+{% extends './extends/_standard.html' %}
+{% import './macros/_texts.html' as text %}
+
+{% block standard %}
+
+  {{ text.headerminimal_paragraph('Hej [[firstName]].', 'Din Sælgerpakke er i dag blevet forlænget i 28 dage og annonceres fortsat på BoligPortal.dk samt de tilknyttede partnersites.<br/><br/>Der er dags dato blevet trukket [[price]] kr. på det tilknyttede betalingskort.<br/><br/>Har du spørgsmål, er du velkommen til at kontakte os på 7020 8082 eller <a href="mailto:info@boligportal.dk">info@boligportal.dk</a>') }}
+
+{% endblock %}
