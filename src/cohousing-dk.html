@@ -1,0 +1,26 @@
+{# Desc: #}
+
+{% extends './extends/_standard.html' %}
+{% import './macros/_buttons.html' as button %}
+{% import './macros/_texts.html' as text %}
+
+{% block standard %}
+
+  {{ text.headerminimal_paragraph('Hej [[firstName]].', 'Vi bekræfter, at du har oprettet en [[productType]] og gennemført betalingen. Der vil snarest blive hævet [[introPrice]] kr. på din konto.') }}
+
+  <mj-section {{bp_section|safe}}>
+    <mj-column width="100%">
+      <mj-text {{bp_text|safe}}>
+        <p>Der vil løbende blive trukket [[price]] kr. på din konto hver [[period]]. dag indtil du afmelder dit abonnement.</p>
+        <p>Ved købet har du accepteret at din fortrydelsesret er bortfaldet med oprettelse af dit produkt, da der er tale om en online serviceydelse som leveres og tages i brug straks ved oprettelse.</p>
+        <p>Vi har gode råd og de rette eksperter klar til dig, hvis du ønsker hjælp til dit ejendomssalg:</p>
+        <ul>
+             <li><a {{bp_link|safe}} href="http://www.boligportal.dk/andelsbolig/saelgselv_guide">Sælgselv guide - få overblik over salgsprocessen</a></li>
+             <li><a {{bp_link|safe}} href="http://www.boligportal.dk/bestil_fotograf">Flotte billeder og plantegning er vigtigt for et hurtigt salg</a></li>
+             <li><a {{bp_link|safe}} href="http://www.boligportal.dk/byggeteknisk_service_bolighandel">Få hjælp til tilstandsrapport, energimærke og el-installationsrapport</a></li>
+        </ul>
+      </mj-text>
+    </mj-column>
+  </mj-section>
+
+{% endblock %}

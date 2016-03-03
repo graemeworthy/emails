@@ -1,0 +1,63 @@
+{# Desc: #}
+
+{% extends './extends/_standard.html' %}
+{% import './macros/_buttons.html' as button %}
+{% import './macros/_texts.html' as text %}
+
+{% block standard %}
+
+  {{ text.headerminimal_paragraph('Hej [[userName]].', '[[totalUnreadMessagesSinceLastMail]] håbefulde ansøgere har skrevet til jer siden i går. Du kan svare dem direkte fra oversigten her.') }}
+
+  {% include "./includes/_hr.html" %}
+
+  [[#advertisementList]]
+  <mj-section padding-top="0px" {{bp_section|safe}}>
+    <mj-column width="100%">
+      <mj-text align="center" {{bp_text|safe}}>
+        <table border="0" width="80%" cellpadding="5" cellspacing="0" bgcolor="#efefef">
+          <tr><td>Journalnr.</td><td>[[this.muEgetAnnNo]]</td></tr>
+          <tr><td>Adresse</td><td>[[this.adresse]]</td></tr>
+          <tr><td>Postnr</td><td>[[this.adressePostNr]]</td></tr>
+          <tr><td>Sagsnr</td><td>[[this.annonceId]]</td></tr>
+          <tr><td>Ulæste beskeder</td><td>[[this.unreadMessagesSinceLastMail]]</td></tr>
+        </table>
+      </mj-text>
+    </mj-column>
+    <mj-column width="50%">
+      <mj-button align="center" href="[[hostInfo]]/min_menu/bolig_til_salg/indbakke/[[this.advertisementId]]?emailToken=[[this.emailLoginToken]]#threadId=[[this.threadId]]" background-color="{{bp_color_green}}" {{bp_button|safe}}>
+        Besvar
+      </mj-button>
+      <mj-button align="center" font-size="14px" padding="7px 12px 7px 12px" href="[[hostInfo]]/bolig_udlejning/storudlejer.php?submitLoginMU=true&login=[[login]]&password=[[password]]&visUdlejetReserveret=[[this.annonceId]]" background-color="{{bp_color_orange}}" {{bp_button|safe}}>
+        Udlejet / reserveret
+      </mj-button>
+    </mj-column>
+  </mj-section>
+  {% include "./includes/_hr.html" %}
+  [[/advertisementList]]
+
+  [[#notAdvertisedProperties]]
+  <mj-section padding-top="0px" {{bp_section|safe}}>
+    <mj-column width="100%">
+      <mj-text align="center" {{bp_text|safe}}>
+        <table border="0" width="80%" cellpadding="5" cellspacing="0" bgcolor="#efefef">
+          <tr><td>Adresse</td><td>[[this.address]]</td></tr>
+          <tr><td>Postnr</td><td>[[this.zipcode]]</td></tr>
+          <tr><td>Sagsnr</td><td>[[this.advertisementId]]</td></tr>
+          <tr><td>Ulæste beskeder</td><td>[[this.unreadMessagesSinceLastMail]]</td></tr>
+        </table>
+      </mj-text>
+      <mj-button align="center" href="[[hostInfo]]/min_menu/bolig_til_salg/indbakke/[[this.advertisementId]]?emailToken=[[this.emailLoginToken]]#threadId=[[this.threadId]]" background-color="{{bp_color_green}}" {{bp_button|safe}}>
+        Indbakke
+      </mj-button>
+    </mj-column>
+    
+  </mj-section>
+  {% include "./includes/_hr.html" %}
+  [[/notAdvertisedProperties]]
+
+
+  {{ text.paragraph('Vi vil bede dig om at markere et lejemål udlejet, når du har fundet den rette lejer. Du kan også vælge at markere et lejemål reserveret, hvis du har modtaget mange ansøgninger.<br/><br/>Hvis du gerne vil have flere ansøgere, kan du fremhæve din annonce under Min Menu.<br/><br/>Vi ønsker jer held og lykke med udlejningen.') }}
+
+{% endblock %}
+
+<a {{bp_link|safe}} href="[[hostInfo]]/min_menu/bolig_til_salg/indbakke/[[this.advertisementId]]?emailToken=[[this.emailLoginToken]]#threadId=[[this.threadId]]">Besvar</a> <a {{bp_link|safe}} href="[[hostInfo]]/bolig_udlejning/storudlejer.php?submitLoginMU=true&login=[[login]]&password=[[password]]&visUdlejetReserveret=[[this.annonceId]]">Udlejet/reserveret</a>
