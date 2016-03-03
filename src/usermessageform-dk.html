@@ -7,19 +7,22 @@
 {% block standard %}
 
   {{ text.headerminimal_paragraph('Hej [[firstName]] [[lastName]]', 'Du har modtaget en ny henvendelse vedr. <strong>[[propertyAddress]]</strong>.') }}
-  <mj-section background-color="#f4f4f4" {{bp_section|safe}}>
+  {% include "./includes/_hr.html" %}
+  <mj-section {{bp_section|safe}}>
     <mj-column width="100%">
+      <mj-text align="center" {{bp_text_h4|safe}}>
+        [[senderFirstName]] [[senderLastName]]
+      </mj-text>
       <mj-text align="center" {{bp_text|safe}}>
-        <strong>[[senderFirstName]] [[senderLastName]]</strong> <br/>
-        <a href="mailto:[[senderEmail]]" target="_blank">[[senderEmail]]</a> • <a href="tel:[[senderTelephone]]" target="_blank">[[senderTelephone]]</a>
+        MAIL <a href="mailto:[[senderEmail]]" target="_blank">[[senderEmail]]</a> • TLF <a href="tel:[[senderTelephone]]" target="_blank">[[senderTelephone]]</a>
       </mj-text>
     </mj-column>
     <mj-column width="100%">
       <mj-text {{bp_text|safe}}>
       </mj-text>
     </mj-column>
-    <mj-column background-color="white" width="90%">
-      <mj-text {{bp_text|safe}}>
+    <mj-column background-color="#efefef" width="85%">
+      <mj-text color="#000000" {{bp_text|safe}}>
         [[message]]
       </mj-text>
     </mj-column>
