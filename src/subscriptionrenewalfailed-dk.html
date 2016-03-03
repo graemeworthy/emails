@@ -1,0 +1,10 @@
+{# Desc: #}
+
+{% extends './extends/_standard.html' %}
+{% import './macros/_texts.html' as text %}
+
+{% block standard %}
+
+  {{ text.headerminimal_paragraph('Hej [[firstName]].', 'Det er ikke lykkedes for os at trække [[price]] på det tilknyttede betalingskort. Derfor kan vi heller ikke forlænge annonceringsperioden på din annonce. Annoncen er derfor nu fjernet fra BoligPortal.dk.<br/><br/>Har du spørgsmål, er du velkommen til at kontakte os på 7020 8082 eller <a href="mailto:info@boligportal.dk">info@boligportal.dk</a>, hvis du fortsat ønsker din bolig annonceret på BoligPortal.dk og hos vores partnere.</p') }}
+
+{% endblock %}
