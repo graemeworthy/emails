@@ -1,0 +1,15 @@
+{# Desc: #}
+
+{% extends './extends/_standard.html' %}
+{% import './macros/_texts.html' as text %}
+
+{% block standard %}
+
+  {{ text.headerminimal_paragraph('Hej [[firstName]]', 'Sådan. Du har nu sat din drømmepris og oprettet din bolig. Nu bliver det spændende, om der er interesse for boligen til den pris, du har sat.') }}
+
+  {{ text.paragraph('Du kan selv være med til at øge synligheden for potentielt interesserede købere ved at dele på sociale medier.<br/><br/>For hvem ved, måske er der en køber, der er på jagt præcis efter en bolig som din. Og måske vil køber endda matche din drømmepris.<br/><br/>Du kan redigere din bolig og tilføje flere billeder via <a href="[[linkToSellersMenu]]" target="_blank">din menu</a>.<br/><br/>Husk, at det er helt gratis og uforpligtende for dig. Det er derfor også valgfrit, om du vil besvare eventuelle henvendelser fra interesserede.<br/><br/>Din bolig bliver vist på BoligPortal.dk, indtil du ikke længere ønsker det.<br/><br/>Har du spørgsmål til konceptet eller øvrige boligrelaterede spørgsmål, er du altid meget velkommen til at kontakte vores kundeservice. Vi er klar til at hjælpe dig alle ugens syv dage. Se vores åbningstider, telefonnummer og mailadresse, eller find svar på dine spørgsmål.') }}
+
+{% endblock %}
+
+
+
